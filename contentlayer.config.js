@@ -33,7 +33,10 @@ export const Project = defineDocumentType(() => ({
 			type: "string",
 			required: true,
 		},
-		date: {
+		startDate: {
+			type: "date",
+		},
+		endDate: {
 			type: "date",
 		},
 		url: {

@@ -13,10 +13,10 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 			<article className="p-4 md:p-8">
 				<div className="flex justify-between gap-2 items-center">
 					<span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
-						{project.date ? (
-							<time dateTime={new Date(project.date).toISOString()}>
+						{project.startDate ? (
+							<time dateTime={new Date(project.startDate).toISOString()}>
 								{Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(
-									new Date(project.date),
+									new Date(project.startDate),
 								)}
 							</time>
 						) : (
