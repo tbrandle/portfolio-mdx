@@ -44,34 +44,48 @@ const LanguageIcon = ({ language }: LanguageIconProps) => {
 
 		case "Kubernetes":
 			return <KubernetesOriginalWordmark size={"65"} />;
+
 		case "Ruby":
 			return <RubyOriginalWordmark size={"65"} />;
+
 		case "Rails":
 			return <RailsPlainWordmark size={"65"} />;
+
 		case "Nextjs":
 			return <NextjsOriginalWordmark size={"65"} />;
+
 		case "AWS":
 			return <AmazonwebservicesOriginalWordmark size={"65"} />;
+
 		case "GCP":
 			return <GooglecloudOriginalWordmark size={"100"} />;
+
 		case "Redux":
 			return <ReduxOriginal size={"60"} />;
+
 		case "GraphQL":
 			return <GraphqlPlainWordmark size={"60"} />;
+
 		case "Typescript":
 			return <TypescriptOriginal size={"60"} />;
+
 		case "Nodejs":
 			return <NodejsOriginalWordmark size={"70"} />;
+
 		case "Prisma":
 			return <PrismaOriginalWordmark size={"70"} />;
+
 		case "PostgresQL":
 			return <PostgresqlOriginalWordmark size={"60"} />;
+
 		case "Express":
 			return <ExpressOriginalWordmark size={"70"} />;
+
 		case "Bootstrap":
 			return <BootstrapOriginalWordmark size={"60"} />;
+
 		case "D3":
-			return <D3jsOriginal size={"60"} />;
+			return <D3jsOriginal size={"60"} />;      
 
 		default:
 			break;

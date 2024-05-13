@@ -6,15 +6,15 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
 	title: {
-		default: "TB",
-		template: "%s | tbrandle.com",
+		default: "brandle.dev",
+		template: "%s | brandle.dev",
 	},
 	description: "Project portfolio for Tim Brandle",
 	openGraph: {
-		title: "tbrandle.com",
+		title: "brandle.dev",
 		description: "Project portfolio for Tim Brandle",
-		url: "https://tbrandle.com",
-		siteName: "tbrandle.com",
+		url: "https://brandle.dev",
+		siteName: "brandle.dev",
 		locale: "en-US",
 		type: "website",
 	},

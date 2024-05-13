@@ -40,7 +40,7 @@ export default async function PostPage({ params }: Props) {
 		<div className="bg-zinc-50 min-h-screen">
 			<Header project={project} views={views} />
 			<ReportView slug={project.slug} />
-			<div className="flex justify-evenly px-4 py-12 mx-auto prose">
+			<div className="flex justify-evenly px-4 pt-10 mx-auto prose">
 				{project.techStack?.split(", ").map((stack) => (
 					<LanguageIcon language={stack} />
 				))}
