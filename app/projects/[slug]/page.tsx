@@ -5,6 +5,7 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import LanguageIcon from "../languageIcon";
 
 export const revalidate = 60;
 
@@ -39,7 +40,11 @@ export default async function PostPage({ params }: Props) {
 		<div className="bg-zinc-50 min-h-screen">
 			<Header project={project} views={views} />
 			<ReportView slug={project.slug} />
-
+			<div className="flex justify-evenly px-4 py-12 mx-auto prose">
+				{project.techStack?.split(", ").map((stack) => (
+					<LanguageIcon language={stack} />
+				))}
+			</div>
 			<article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
 				<Mdx code={project.body.code} />
 			</article>

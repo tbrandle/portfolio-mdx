@@ -14,11 +14,28 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 				<div className="flex justify-between gap-2 items-center">
 					<span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
 						{project.startDate ? (
+							<>
 							<time dateTime={new Date(project.startDate).toISOString()}>
 								{Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(
 									new Date(project.startDate),
 								)}
 							</time>
+							{project.endDate ? (
+													<>
+														{" "}
+														-{" "}
+														<time
+															dateTime={new Date(
+																project.endDate,
+															).toISOString()}
+														>
+															{Intl.DateTimeFormat(undefined, {
+																dateStyle: "medium",
+															}).format(new Date(project.endDate))}
+														</time>
+													</>
+												) : null}
+												</>
 						) : (
 							<span>SOON</span>
 						)}

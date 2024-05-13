@@ -39,6 +39,9 @@ export const Project = defineDocumentType(() => ({
 		endDate: {
 			type: "date",
 		},
+		techStack: {
+			type: "string",
+		},
 		url: {
 			type: "string",
 		},

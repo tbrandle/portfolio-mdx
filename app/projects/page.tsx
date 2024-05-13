@@ -6,6 +6,7 @@ import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import LanguageIcon from "./languageIcon";
 
 const redis = Redis.fromEnv();
 
@@ -21,8 +22,8 @@ export default async function ProjectsPage() {
 	}, {} as Record<string, number>);
 
 	const featured = allProjects.find((project) => project.slug === "oic")!;
-	const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-	const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+	const top2 = allProjects.find((project) => project.slug === "green-cloud")!;
+	const top3 = allProjects.find((project) => project.slug === "rolling-ninja-scones")!;
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
@@ -103,7 +104,7 @@ export default async function ProjectsPage() {
 								<p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
 									{featured.description}
 								</p>
-								<div className="absolute bottom-4 md:bottom-8">
+								<div className="absolute bottom-4 md:bottom-8 flex justify-between items-center w-11/12  pr-3">
 									<p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
 										Read more <span aria-hidden="true">&rarr;</span>
 									</p>
